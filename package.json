@@ -1,0 +1,24 @@
+{
+  "name": "@ambassify/load-env",
+  "version": "1.0.0",
+  "description": "Helper for environment variables in node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ambassify/load-env.git"
+  },
+  "keywords": [
+    "environment",
+    "node_env",
+    "env"
+  ],
+  "author": "Ambassify <dev@ambassify.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ambassify/load-env/issues"
+  },
+  "homepage": "https://github.com/ambassify/load-env#readme"
+}
