@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/ambassify/load-env/issues"
   },
-  "homepage": "https://github.com/ambassify/load-env#readme"
+  "homepage": "https://github.com/ambassify/load-env#readme",
+  "dependencies": {
+    "@ambassify/json-parse-safe": "^1.0.0",
+    "caller-id": "^0.1.0"
+  }
 }
