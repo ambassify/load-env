@@ -25,7 +25,7 @@ module.exports = function createLoadEnvWithPrefix(prefix) {
     if (!prefix) {
         const caller = callerId.getData().filePath;
         let packageName = findPackageName(caller);
-        
+
         if (packageName) {
             // remove scope if available
             packageName = packageName.split('/').pop();
@@ -35,7 +35,7 @@ module.exports = function createLoadEnvWithPrefix(prefix) {
 
     return (key, ...args) => {
         try {
-            return load_env(`${prefix}${k}`, ...args);
+            return load_env(`${prefix}${key}`, ...args);
         } catch (e) {
             if (typeof process.env[`${prefix}${key}`] === 'undefined')
                 return load_env(key, ...args);
