@@ -1,6 +1,6 @@
 {
   "name": "@ambassify/load-env",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Helper for environment variables in node.",
   "main": "index.js",
   "scripts": {
