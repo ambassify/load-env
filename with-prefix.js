@@ -29,7 +29,7 @@ module.exports = function createLoadEnvWithPrefix(prefix) {
         if (packageName) {
             // remove scope if available
             packageName = packageName.split('/').pop();
-            prefix = packageName.toUpperCase().replace(/[^a-z0-9]+/gi, '_') + '_';
+            prefix = packageName.toLowerCase().replace(/[^a-z0-9]+/gi, '_') + '__';
         }
     }
 
