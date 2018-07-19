@@ -13,4 +13,4 @@ module.exports = function load_env(name, defaultValue, parser) {
         throw new Error(`Environment variable ${name} could not be parsed`);
 
     return isUndefined(value) ? defaultValue : value;
-}
+};

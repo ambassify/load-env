@@ -3,4 +3,4 @@ module.exports = function parseNumber(value) {
         return;
 
     return parseFloat(value);
-}
+};

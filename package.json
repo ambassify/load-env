@@ -4,7 +4,9 @@
   "description": "Helper for environment variables in node.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm -s run test:lint && npm -s run test:unit",
+    "test:lint": "eslint parsers index.js with-prefix.js test",
+    "test:unit": "nyc mocha"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,10 @@
   "dependencies": {
     "@ambassify/json-parse-safe": "^1.0.0",
     "caller-id": "^0.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2"
   }
 }

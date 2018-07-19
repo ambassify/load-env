@@ -3,4 +3,4 @@ module.exports = function parseInteger(value) {
         return;
 
     return parseInt(value);
-}
+};
