@@ -21,7 +21,7 @@ function findPackageName(from) {
     return (contents || {}).name;
 }
 
-module.exports = function createLoadEnvWithPrefix(prefix) {
+module.exports = function createLoadEnvWithPrefix(prefix, { allowFallback = true } = {}) {
     if (!prefix) {
         const caller = callerId.getData().filePath;
         let packageName = findPackageName(caller);
@@ -34,13 +34,9 @@ module.exports = function createLoadEnvWithPrefix(prefix) {
     }
 
     return (key, ...args) => {
-        try {
-            return load_env(`${prefix}${key}`, ...args);
-        } catch (e) {
-            if (typeof process.env[`${prefix}${key}`] === 'undefined')
-                return load_env(key, ...args);
-            else
-                throw e;
-        }
+        if (!allowFallback || typeof process.env[`${prefix}${key}`] !== 'undefined')
+            key = `${prefix}${key}`;
+
+        return load_env(key, ...args);
     };
 }
