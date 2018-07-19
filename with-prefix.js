@@ -16,7 +16,7 @@ function findPackageName(from) {
         const parent = Path.dirname(from);
         from = from === parent ? null : parent;
 
-    } while (from && !contents)
+    } while (from && !contents);
 
     return (contents || {}).name;
 }
@@ -39,4 +39,4 @@ module.exports = function createLoadEnvWithPrefix(prefix, { allowFallback = true
 
         return load_env(key, ...args);
     };
-}
+};
