@@ -61,4 +61,12 @@ describe('load_env/with-prefix', () => {
         assert.equal(load_env('VARIABLE', 'default-test-value'), 'non-prefixed test-value');
     });
 
+    it('Should detect calling package and use it as prefix', () => {
+        process.env['load_env__VARIABLE'] = 'package-name test-value';
+
+        const load_env = withPrefix();
+
+        assert.equal(load_env('VARIABLE', 'default-test-value'), 'package-name test-value');
+    });
+
 });

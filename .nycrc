@@ -1,7 +1,8 @@
 {
     "all": true,
-    "exclude": [
-        "test/**/*"
+    "include": [
+        "./*.js",
+        "parsers/**/*.js"
     ],
     "reporter": [ "text", "lcov", "json-summary" ]
 }
